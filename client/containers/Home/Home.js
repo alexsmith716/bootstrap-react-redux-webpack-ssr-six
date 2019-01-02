@@ -83,7 +83,7 @@ class Home extends Component {
 
           <div className="row">
             <div className="col-lg-12 d-flex justify-content-center">
-              <p className="color-crimson font-opensans-bold-webfont">'online' store state is ${online} !!!!!!!!!!!!!!!!</p>
+              <p className="color-crimson font-opensans-bold-webfont">'online' store state is online !!!!!!!!!!!!!!!!</p>
             </div>
           </div>
 

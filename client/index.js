@@ -2,6 +2,8 @@ import "@babel/polyfill";
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import { BrowserRouter as Router } from 'react-router-dom';
+
 import { renderRoutes } from 'react-router-config';
 import { trigger } from 'redial';
 
@@ -61,14 +63,16 @@ const dest = document.getElementById('content');
 
     // Wait for async data fetching to complete, then continue to render
     // Don't fetch data for initial route, server has already done the work:
-    console.log('>>>>>>>>>>>>>>>>>>> CLIENT.JS > window.__PRELOADED__ ??: ', window.__PRELOADED__)
-    if (window.__PRELOADED__) {
-      // Delete initial data so that subsequent data fetches can occur:
-      delete window.__PRELOADED__;
-    } else {
-      // Fetch mandatory data dependencies for 2nd route change onwards:
-      await trigger('fetch', components, triggerLocals);
-    }
+    // console.log('>>>>>>>>>>>>>>>>>>> CLIENT.JS > window.__PRELOADED__ ??: ', window.__PRELOADED__)
+    // if (window.__PRELOADED__) {
+    //   // Delete initial data so that subsequent data fetches can occur:
+    //   delete window.__PRELOADED__;
+    // } else {
+    //   // Fetch mandatory data dependencies for 2nd route change onwards:
+    //   await trigger('fetch', components, triggerLocals);
+    // }
+
+    await trigger('fetch', components, triggerLocals);
     await trigger('defer', components, triggerLocals);
 
     // server-rendered markup ('ReactDOMServer.renderToString()') sent here
@@ -76,9 +80,11 @@ const dest = document.getElementById('content');
     // (allows for a very performant first-load experience)
     ReactDOM.hydrate(
       <HotEnabler>
-        <ReduxAsyncConnect routes={_routes}>
-          {renderRoutes(_routes)}
-        </ReduxAsyncConnect>
+        <Router>
+          <ReduxAsyncConnect routes={_routes}>
+            {renderRoutes(_routes)}
+          </ReduxAsyncConnect>
+        </Router>
       </HotEnabler>,
       dest
     );
