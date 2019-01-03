@@ -38,8 +38,7 @@ class App extends Component {
 
   static propTypes = {
     route: PropTypes.objectOf(PropTypes.any).isRequired,
-    location: PropTypes.objectOf(PropTypes.any).isRequired,
-    pushState: PropTypes.func.isRequired
+    location: PropTypes.objectOf(PropTypes.any).isRequired
   };
 
   // getDerivedStateFromProps(): enables component to update internal state as the result of changes in props
@@ -127,12 +126,13 @@ class App extends Component {
                 </li>
 
                 <li className="nav-item dropdown">
-                  <a className="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About Us</a>
+                  <a className="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Links</a>
                   <div className="dropdown-menu" aria-labelledby="dropdown01">
                     <Link to='/about-one' className="dropdown-item js-scroll-trigger">AboutOne</Link>
                     <Link to='/about-two' className="dropdown-item js-scroll-trigger">AboutTwo</Link>
                     <Link to='/about-three' className="dropdown-item js-scroll-trigger">AboutThree</Link>
                     <Link to='/about-four' className="dropdown-item js-scroll-trigger">AboutFour</Link>
+                    <Link to='/tic-tac-toe' className="dropdown-item js-scroll-trigger">Tic-Tac-Toe</Link>
                   </div>
                 </li>
               </ul>
