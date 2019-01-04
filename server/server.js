@@ -1,9 +1,10 @@
-import fs from 'fs';
-import config from '../config/config';
-import path from 'path';
 
 global.__CLIENT__ = false;
 global.__SERVER__ = true;
+
+import fs from 'fs';
+import config from '../config/config';
+import path from 'path';
 
 import React from 'react';
 

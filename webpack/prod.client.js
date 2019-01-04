@@ -1,5 +1,3 @@
-// require('@babel/polyfill');
-
 const path = require('path');
 const webpack = require('webpack');
 const config = require('../config/config');

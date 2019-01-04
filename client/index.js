@@ -1,3 +1,7 @@
+
+global.__CLIENT__ = true;
+global.__SERVER__ = false;
+
 import "@babel/polyfill";
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -17,9 +21,6 @@ import { AppContainer as HotEnabler } from 'react-hot-loader';
 import routes from '../shared/routes';
 
 import createBrowserHistory from 'history/createBrowserHistory';
-
-global.__CLIENT__ = true;
-global.__SERVER__ = false;
 
 import './assets/js/app';
 
