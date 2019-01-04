@@ -29,7 +29,8 @@ module.exports = {
   name: 'server',
   target: 'node',
   mode: 'development',
-  // devtool: 'eval',  // generated code 
+  devtool: 'eval',  // generated code
+  // devtool: false,
 
   entry: path.resolve(__dirname, '../server/server.js'),
 

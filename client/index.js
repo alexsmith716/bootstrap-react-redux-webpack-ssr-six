@@ -44,6 +44,10 @@ const dest = document.getElementById('content');
 
     const { components, match, params } = await asyncMatchRoutes(_routes, history.location.pathname);
 
+    console.log('>>>>>>>>>>>>>>>>>>> CLIENT.JS > asyncMatchRoutes > components: ', components);
+    console.log('>>>>>>>>>>>>>>>>>>> CLIENT.JS > asyncMatchRoutes > match: ', match);
+    console.log('>>>>>>>>>>>>>>>>>>> CLIENT.JS > asyncMatchRoutes > params: ', params);
+
     // preserve SSR markup and attach needed event handlers
     // ensure all data for routes is prefetched on client before rendering
     // attach any needed event handlers to the existing server rendered markup
@@ -54,12 +58,12 @@ const dest = document.getElementById('content');
     // for initial load, components App && Home. only App - '@@redial-hooks': {fetch: [Function: fetch]}
 
     // Define locals to be provided to all lifecycle hooks (@provideHooks)
-    const triggerLocals = {
-      match,
-      params,
-      history,
-      location: history.location
-    };
+    // const triggerLocals = {
+    //   match,
+    //   params,
+    //   history,
+    //   location: history.location
+    // };
 
     // Wait for async data fetching to complete, then continue to render
     // Don't fetch data for initial route, server has already done the work:
@@ -72,8 +76,9 @@ const dest = document.getElementById('content');
     //   await trigger('fetch', components, triggerLocals);
     // }
 
-    await trigger('fetch', components, triggerLocals);
-    await trigger('defer', components, triggerLocals);
+    // await trigger('fetch', components, triggerLocals);
+    // Fetch deferred, client-only data dependencies:
+    // await trigger('defer', components, triggerLocals);
 
     // server-rendered markup ('ReactDOMServer.renderToString()') sent here
     // 'ReactDOM.hydrate()' preserves server-sent server-rendered markup

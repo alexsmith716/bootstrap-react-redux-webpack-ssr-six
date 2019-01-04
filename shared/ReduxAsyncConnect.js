@@ -38,7 +38,7 @@ export default class ReduxAsyncConnect extends Component {
     NProgress.configure({ trickleSpeed: 222200 });
   }
 
-  async UNSAFE_componentWillReceiveProps(nextProps) {
+  async componentWillReceiveProps(nextProps) {
 
     // current props
     const { history, location, routes } = this.props;

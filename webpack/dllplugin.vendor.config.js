@@ -9,6 +9,8 @@ const projectRootPath = path.resolve(__dirname, '../');
 module.exports = {
 
   mode: 'development',
+  // devtool: 'inline-source-map', // A SourceMap is added as a DataUrl to the bundle
+  devtool: 'eval',
 
   output: {
     // dll bundle build
