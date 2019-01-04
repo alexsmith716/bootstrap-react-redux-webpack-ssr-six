@@ -43,6 +43,9 @@ export default class ReduxAsyncConnect extends Component {
     // current props
     const { history, location, routes } = this.props;
 
+    console.log('>>>>>>>>>>>>>>>> ReduxAsyncConnect > componentWillReceiveProps() > __CLIENT__ ?: ', __CLIENT__);
+    console.log('>>>>>>>>>>>>>>>> ReduxAsyncConnect > componentWillReceiveProps() > __SERVER__ ?: ', __SERVER__);
+
     console.log('>>>>>>>>>>>>>>>> ReduxAsyncConnect > componentWillReceiveProps() > location:', location);
     console.log('>>>>>>>>>>>>>>>> ReduxAsyncConnect > componentWillReceiveProps() > nextProps.location:', nextProps.location);
 

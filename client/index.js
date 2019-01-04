@@ -1,7 +1,3 @@
-
-global.__CLIENT__ = true;
-global.__SERVER__ = false;
-
 import "@babel/polyfill";
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -45,9 +41,12 @@ const dest = document.getElementById('content');
 
     const { components, match, params } = await asyncMatchRoutes(_routes, history.location.pathname);
 
-    console.log('>>>>>>>>>>>>>>>>>>> CLIENT.JS > asyncMatchRoutes > components: ', components);
-    console.log('>>>>>>>>>>>>>>>>>>> CLIENT.JS > asyncMatchRoutes > match: ', match);
-    console.log('>>>>>>>>>>>>>>>>>>> CLIENT.JS > asyncMatchRoutes > params: ', params);
+    console.log('>>>>>>>>>>>>>>>>>>> CLIENT.JS > hydrate > __CLIENT__ ?: ', __CLIENT__);
+    console.log('>>>>>>>>>>>>>>>>>>> CLIENT.JS > hydrate > __SERVER__ ?: ', __SERVER__);
+
+    console.log('>>>>>>>>>>>>>>>>>>> CLIENT.JS > hydrate > asyncMatchRoutes > components: ', components);
+    console.log('>>>>>>>>>>>>>>>>>>> CLIENT.JS > hydrate > asyncMatchRoutes > match: ', match);
+    console.log('>>>>>>>>>>>>>>>>>>> CLIENT.JS > hydrate > asyncMatchRoutes > params: ', params);
 
     // preserve SSR markup and attach needed event handlers
     // ensure all data for routes is prefetched on client before rendering

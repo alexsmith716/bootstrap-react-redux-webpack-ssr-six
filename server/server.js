@@ -1,7 +1,3 @@
-
-global.__CLIENT__ = false;
-global.__SERVER__ = true;
-
 import fs from 'fs';
 import config from '../config/config';
 import path from 'path';
@@ -45,6 +41,9 @@ import Html from '../server/utils/Html';
 // ------------------------------------------------------------------------------------------------------
 
 export default ({ clientStats }) => async (req, res) => {
+
+  console.log('>>>>>>>>>>>>>>>>> SERVER > __CLIENT__ ?: ', __CLIENT__);
+  console.log('>>>>>>>>>>>>>>>>> SERVER > __SERVER__ ?: ', __SERVER__);
 
   // progressive app manifest
   // https://www.w3.org/TR/appmanifest/
