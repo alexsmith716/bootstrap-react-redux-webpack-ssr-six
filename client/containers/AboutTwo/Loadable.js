@@ -6,7 +6,7 @@ const AboutTwoLoadable = universal(() => import(/* webpackChunkName: 'about-two'
   path: path.resolve(__dirname, './AboutTwo'),
   resolve: () => require.resolveWeak('./AboutTwo'),
   chunkName: 'about-two',
-  minDelay: 500
+  minDelay: 2500
 })
 
 export default AboutTwoLoadable;

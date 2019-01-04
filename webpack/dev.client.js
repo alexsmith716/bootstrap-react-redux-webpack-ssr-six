@@ -42,7 +42,9 @@ const webpackConfig = {
   name: 'client',
   target: 'web',
   mode: 'development',
-  devtool: 'eval-source-map',  // best quality SourceMaps for development
+  devtool: 'eval', // Each module is executed with eval() and //@ sourceURL
+  // devtool: false, // disables default devtool configuration
+  // devtool: 'eval-source-map',  // best quality SourceMaps for development
   // devtool: 'source-map',       // A full SourceMap is emitted as a separate file
   // devtool: 'inline-source-map',   // A SourceMap is added as a DataUrl to the bundle
 
@@ -233,6 +235,18 @@ const webpackConfig = {
       openAnalyzer: false,
       generateStatsFile: false
     }),
+
+    // This plugin enables more fine grained control of source map generation.
+    // https://webpack.js.org/plugins/source-map-dev-tool-plugin/#exclude-vendor-maps
+    // https://webpack.js.org/plugins/source-map-dev-tool-plugin/#host-source-maps-externally
+    // It is also enabled automatically by certain settings of the devtool configuration option.
+    // filename: (string): Defines the output filename of the SourceMap (will be inlined if no value is provided).
+    // exclude: (string|regex|array): Exclude modules that match the given value from source map generation.
+    // *** exclude source maps for any modules in vendor.js bundle ***
+    // new webpack.SourceMapDevToolPlugin({
+    //   filename: '[name].js.map',
+    //   // exclude: ['vendor.js']
+    // }),
 
     // https://webpack.js.org/plugins/provide-plugin/
     // Use modules without having to use import/require

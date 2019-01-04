@@ -6,7 +6,7 @@ const TicTacToeLoadable = universal(() => import(/* webpackChunkName: 'tic-tac-t
   path: path.resolve(__dirname, './TicTacToe'),
   resolve: () => require.resolveWeak('./TicTacToe'),
   chunkName: 'tic-tac-toe',
-  minDelay: 500
+  minDelay: 2500
 })
 
 export default TicTacToeLoadable;
