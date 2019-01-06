@@ -27,7 +27,7 @@ class About extends Component {
 
         <Helmet title="About Us" />
 
-        <h1 className={`mt-4 mb-3 ${styles.aboutUniqueColor}`}>About!%%%%%%</h1>
+        <h1 className={`mt-4 mb-3 ${styles.aboutUniqueColor}`}>About</h1>
 
         <div className="row">
           <div className="col-lg-6">

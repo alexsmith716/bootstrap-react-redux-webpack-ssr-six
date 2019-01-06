@@ -89,7 +89,7 @@ class App extends Component {
 
           <div className="container">
 
-            <Link to='/' className={`navbar-brand js-scroll-trigger ${styles.brand}`}>Election App!</Link>
+            <Link to='/' className={`navbar-brand js-scroll-trigger ${styles.brand}`}>Election App</Link>
 
             <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
@@ -128,11 +128,11 @@ class App extends Component {
                 <li className="nav-item dropdown">
                   <a className="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Links</a>
                   <div className="dropdown-menu" aria-labelledby="dropdown01">
-                    <Link to='/about-one' className="dropdown-item js-scroll-trigger">AboutOne</Link>
-                    <Link to='/about-two' className="dropdown-item js-scroll-trigger">AboutTwo</Link>
-                    <Link to='/about-three' className="dropdown-item js-scroll-trigger">AboutThree</Link>
-                    <Link to='/about-four' className="dropdown-item js-scroll-trigger">AboutFour</Link>
-                    <Link to='/tic-tac-toe' className="dropdown-item js-scroll-trigger">Tic-Tac-Toe</Link>
+                    <Link to='/about-one' className="dropdown-item js-scroll-trigger">About One</Link>
+                    <Link to='/about-two' className="dropdown-item js-scroll-trigger">About Two</Link>
+                    <Link to='/about-three' className="dropdown-item js-scroll-trigger">About Three</Link>
+                    <Link to='/about-four' className="dropdown-item js-scroll-trigger">About Four</Link>
+                    <Link to='/board-games' className="dropdown-item js-scroll-trigger">Board Games</Link>
                   </div>
                 </li>
               </ul>
