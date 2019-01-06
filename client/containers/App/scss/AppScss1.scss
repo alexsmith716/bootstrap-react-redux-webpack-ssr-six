@@ -1,5 +1,5 @@
 
-@import '../../../assets/scss/app/sharedresources.scss';
+@import '../../sharedresources.scss';
 
 .app {
   .brand {
@@ -32,8 +32,8 @@
   position: absolute;
   bottom: 0;
   width: 100%;
-  // background-color: #0000FF;
-  background-color: $shared-var-color-syracuse-orange;
+  background-color: #0000FF;
+  // background-color: $shared-var-color-syracuse-orange;
   // @extend %footerHeight;
   height: calculate-rem($footer-height);
   .flexContainer {

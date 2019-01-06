@@ -6,7 +6,7 @@ const StickyFooterLoadable = universal(() => import(/* webpackChunkName: 'sticky
   path: path.resolve(__dirname, './StickyFooter'),
   resolve: () => require.resolveWeak('./StickyFooter'),
   chunkName: 'sticky-footer',
-  minDelay: 2500
+  minDelay: 500
 })
 
 export default StickyFooterLoadable;

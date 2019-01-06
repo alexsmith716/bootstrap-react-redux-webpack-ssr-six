@@ -52,7 +52,9 @@ const webpackConfig = {
 
   entry: {
     main: [
-      `webpack-hot-middleware/client?path=http://${host}:${port}/__webpack_hmr`,
+      // `webpack-hot-middleware/client?path=http://${host}:${port}/__webpack_hmr`,
+      // 'webpack-hot-middleware/client?reload=true',
+      'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000&reload=false&quiet=false&noInfo=false',
       path.resolve(__dirname, '../client/assets/scss/bootstrap/bootstrap.global.scss'),
       'bootstrap',
       path.resolve(__dirname, '../client/index.js'),

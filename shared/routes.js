@@ -7,7 +7,7 @@ import AboutTwo from '../client/containers/AboutTwo/Loadable';
 import AboutThree from '../client/containers/AboutThree/Loadable';
 import AboutFour from '../client/containers/AboutFour/Loadable';
 import StickyFooter from '../client/containers/StickyFooter/Loadable';
-import TicTacToe from '../client/containers/TicTacToe/Loadable';
+import BoardGames from '../client/containers/Games/BoardGames/Loadable';
 
 const routes = [{
   component: App,
@@ -19,7 +19,7 @@ const routes = [{
     { path: '/about-three', component: AboutThree },
     { path: '/about-four', component: AboutFour },
     { path: '/sticky-footer', component: StickyFooter },
-    { path: '/tic-tac-toe', component: TicTacToe },
+    { path: '/board-games', component: BoardGames },
     { component: NotFound }
   ]
 }];

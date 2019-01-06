@@ -6,7 +6,7 @@ const AboutThreeLoadable = universal(() => import(/* webpackChunkName: 'about-th
   path: path.resolve(__dirname, './AboutThree'),
   resolve: () => require.resolveWeak('./AboutThree'),
   chunkName: 'about-three',
-  minDelay: 2500
+  minDelay: 500
 })
 
 export default AboutThreeLoadable;
